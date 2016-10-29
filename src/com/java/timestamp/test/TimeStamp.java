@@ -48,4 +48,7 @@ public class TimeStamp {
 		System.out.println(df4.format(date));
 	}
 
+	public String showMsg() {
+		return "fa";
+	}
 }
