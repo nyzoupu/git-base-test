@@ -17,15 +17,15 @@ public class TestClassLoader extends ClassLoader{
 		if (instanceClass != null) {
 			return instanceClass;
 		}else {
-//			ClassLoader parent = this.getParent();
-//			try {
-//				instanceClass = parent.loadClass(name);
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//			if (instanceClass!= null) {
-//				return instanceClass;
-//			}
+			ClassLoader parent = this.getParent();
+			try {
+				instanceClass = parent.loadClass(name);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			if (instanceClass!= null) {
+				return instanceClass;
+			}
 			byte[] classData = getClassData(name);
 			if (classData == null) {
 				throw new ClassNotFoundException();
@@ -74,6 +74,8 @@ public class TestClassLoader extends ClassLoader{
 		 TestClassLoader classLoader = new TestClassLoader("E:\\java-code-demo\\java-based-test\\bin\\");
 		 Class<?> instance = classLoader.findClass("com.java.timestamp.test.TimeStamp");
 		 System.out.println(instance.hashCode() + "," + instance.getClassLoader());
+		 Class<?> strClass = classLoader.findClass("java.lang.String");
+		 System.out.println(strClass.getClassLoader());
 		 Object object= instance.newInstance();
 		 String str=(String) instance.getMethod("showMsg").invoke(object);
 		 System.out.println(str);
