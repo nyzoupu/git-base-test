@@ -25,7 +25,7 @@ public class FileSystemDigui {
         System.out.println("文件个数:--------" + filelist.size());
  
     }
- 
+
     public static void refreshFileList(String strPath) {
         File dir = new File(strPath);
         File[] files = dir.listFiles();

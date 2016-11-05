@@ -74,7 +74,6 @@ class ConcrectWatcher implements Watcher
 	 */
 	@Override
 	public void update(String str) {
-		// TODO Auto-generated method stub
 		System.out.println(str);
 	}
 }
@@ -92,7 +91,6 @@ class ConcrectWatched implements Watched
 	 */
 	@Override
 	public void add(Watcher watcher) {
-		// TODO Auto-generated method stub
 		watchList.add(watcher);
 		
 	}
@@ -105,7 +103,6 @@ class ConcrectWatched implements Watched
 	 */
 	@Override
 	public void remove(Watcher watcher) {
-		// TODO Auto-generated method stub
 		watchList.remove(watcher);
 	}
 
@@ -117,7 +114,6 @@ class ConcrectWatched implements Watched
 	 */
 	@Override
 	public void notified(String str) {
-		// TODO Auto-generated method stub
 		for (Watcher watcherVar : watchList) {
 			watcherVar.update(str);
 		}
