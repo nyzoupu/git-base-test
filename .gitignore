@@ -32,3 +32,11 @@
 ehthumbs.db 
 Icon? 
 Thumbs.db 
+
+#忽略maven编译的target、bin文件夹  
+target/  
+bin/
+#忽略eclipse的工程文件  
+.classpath  
+.project  
+.settings/  
