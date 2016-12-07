@@ -8,9 +8,9 @@ import java.util.List;
  * ClassName: ObserModeTest <br/> 
  * Function: TODO ADD FUNCTION. <br/> 
  * 
- * @author Paulsen¡¤Zou 
+ * @author Paulsenï¿½ï¿½Zou 
  * @version  
- * @Date:2016Äê5ÔÂ17ÈÕÏÂÎç11:25:58 
+ * @Date:2016ï¿½ï¿½5ï¿½ï¿½17ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½11:25:58 
  * @version V1.0
  */
 public class ObserModeTest {
@@ -23,16 +23,16 @@ public class ObserModeTest {
 	}
 
 	/**
-	 * main(ÕâÀïÓÃÒ»¾ä»°ÃèÊöÕâ¸ö·½·¨µÄ×÷ÓÃ)</p>
+	 * main(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ä»°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)</p>
 	 *
-	 * @param args    Éè¶¨ÎÄ¼þ
-	 * @return void    ·µ»ØÀàÐÍ
+	 * @param args    ï¿½è¶¨ï¿½Ä¼ï¿½
+	 * @return void    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @throws
 	 */
 	public static void main(String[] args)
 	{
 		Watched watched = new ConcrectWatched();
-		
+		 
 		
 		Watcher watcher1 = new ConcrectWatcher();
 		Watcher watcher2 = new ConcrectWatcher();
@@ -44,7 +44,7 @@ public class ObserModeTest {
 		watched.add(watcher3);
 		watched.add(watcher4);
 		
-		watched.notified("Hello,¸÷Î»");
+		watched.notified("Hello,ï¿½ï¿½Î»");
 		
 		
 	}
