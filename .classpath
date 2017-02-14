@@ -2,5 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/项目/ce/synthetic/fastjson-1.1.33.jar"/>
+	<classpathentry kind="lib" path="D:/Users/wb-zp195009/桌面/bigdatagw-sdk/shangshu-gateway-sdk-java20170104.jar" sourcepath="D:/Users/wb-zp195009/桌面/bigdatagw-sdk/shangshu-gateway-sdk-java20170104-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
