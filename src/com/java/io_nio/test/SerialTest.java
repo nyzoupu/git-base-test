@@ -1,4 +1,4 @@
-package com.java.varargs.test;
+package com.java.io_nio.test;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -8,9 +8,9 @@ import java.io.Serializable;
 
 import com.alibaba.fastjson.JSON;
 
-public class Test {
+public class SerialTest {
 
-    public Test() {
+    public SerialTest() {
     }
 
     public static void main(String[] args) throws IOException{ 
