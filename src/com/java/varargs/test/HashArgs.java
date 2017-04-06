@@ -1,5 +1,8 @@
 package com.java.varargs.test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class HashArgs {
 
     public HashArgs() {
@@ -23,6 +26,9 @@ public class HashArgs {
         int lenght = 16;
         System.out.println(a % lenght);
         System.out.println(a & (lenght - 1));
+        
+        Map<String, Object> hash = new HashMap<String, Object>();
+        hash.put("key1", "value1");
 
     }
 }
