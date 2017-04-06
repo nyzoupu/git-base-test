@@ -3,6 +3,7 @@ package com.java.io_nio.test;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
@@ -28,22 +29,37 @@ public class IoNioTest {
      * @throws
      */
     public static void main(String[] args) throws IOException {
+        
+        InputStream inputStream = new FileInputStream("D:/shuliAuthData.json");    
+        byte[] head = new byte[3];    
+        inputStream.read(head);      
+        String code = "";    
+     
+            code = "gb2312";    
+        if (head[0] == -1 && head[1] == -2 )    
+            code = "UTF-16";    
+        if (head[0] == -2 && head[1] == -1 )    
+            code = "Unicode";    
+        if(head[0]==-17 && head[1]==-69 && head[2] ==-65)    
+            code = "UTF-8";    
+            
+        System.out.println(code);   
         // TODO Auto-generated method stub
-        long startTime = System.currentTimeMillis();
-        FileInputStream fin = new FileInputStream("D:/trunk.zip");
-        FileChannel fc = fin.getChannel();
-        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
-        while (fc.read(byteBuffer) != -1) {
+//        long startTime = System.currentTimeMillis();
+//        FileInputStream fin = new FileInputStream("D:/trunk.zip");
+//        FileChannel fc = fin.getChannel();
+//        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+//        while (fc.read(byteBuffer) != -1) {
+////            byteBuffer.clear();
+//            byteBuffer.flip();
+//            Charset charset = Charset.forName("utf-8");
+////            CharsetDecoder decoder = charset.newDecoder();
+//            CharBuffer charBuffer = charset.decode(byteBuffer);
+//            System.out.println(charBuffer.toString());
 //            byteBuffer.clear();
-            byteBuffer.flip();
-            Charset charset = Charset.forName("utf-8");
-//            CharsetDecoder decoder = charset.newDecoder();
-            CharBuffer charBuffer = charset.decode(byteBuffer);
-            System.out.println(charBuffer.toString());
-            byteBuffer.clear();
-        }
-        fc.close();
-        System.out.println("nio:" + (System.currentTimeMillis() - startTime));
+//        }
+//        fc.close();
+//        System.out.println("nio:" + (System.currentTimeMillis() - startTime));
         
 //        long startTime1 = System.currentTimeMillis();
 //        RandomAccessFile raf = new RandomAccessFile("D:/trunk.zip", "rw");
